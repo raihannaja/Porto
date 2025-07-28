@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    max-height: 80px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li:last-child {
+    margin-left: 10px;
+}
+
+nav ul li .contact-btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .contact-btn:hover {
+    background-color: #0056b3;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a.active {
+    color: #ff6600;
+}
+
+nav ul li a.active:hover {
+    color: #0056b3;
+}
+
+nav ul li a:hover {
+    color: #f97316;
+}
+
+hr {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.hero {
+    display: flex;
+    padding: 60px 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 450px;
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.circle-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.curve {
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    border: 10px solid #ff6600;
+    border-top: none;
+    border-left: none;
+    border-radius: 0 0 105% 0;
+    bottom: -40px;
+    right: -30px;
+    top: 200px;
+}
+
+.orange-line {
+    height: 10px;
+    width: 900px;
+    background-color: #ff6600;
+    margin: -15px 0 20px 100px;
+}
+
+.koleksi {
+    text-align: center;
+    margin: 60px 20px;
+}
+
+.koleksi-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f97316;
+}
+
+.koleksi-desc {
+    font-size: 14px;
+    color: #111;
+    max-width: 900px;
+    margin: 10px auto 40px;
+    line-height: 1.6;
+}
+
+.koleksi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.koleksi-item {
+    text-align: center;
+}
+
+.koleksi-item img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #f97316;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.koleksi-label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f97316;
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .koleksi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .koleksi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.alasan-section {
+    background: url('../img/background.png') no-repeat center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: #000;
+}
+
+.alasan-title {
+    display: inline-block;
+    background: linear-gradient(to right, #f15a24, #fbb03b);
+    color: white;
+    padding: 14px 28px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.alasan-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.alasan-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alasan-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.thumbs-up {
+    background: none;
+    box-shadow: none;
+}
+
+.alasan-top-row,
+.alasan-bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.jempol-besar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jempol-besar img {
+    width: 120px;
+    height: auto;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .alasan-top-row,
+    .alasan-bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jempol-besar img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.tentang-kami {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 100px 120px;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.tentang-kami-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+}
+
+.tentang-kami-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tentang-kami-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.tentang-kami-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tentang-kami-image img {
+    max-width: 100%;
+    width: 550px;
+    height: auto;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px 30px;
+    font-family: Arial, sans-serif;
+}
+
+.testimonials .sub-title {
+    color: #f37021;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.testimonials .main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.testimonials .main-title span {
+    color: #f37021;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.testimonial {
+    background-color: #f37021;
+    border: 2px solid #000;
+    border-radius: 30px;
+    flex: 0 0 300px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* ini yang mengatur jarak antara <p> dan <strong> */
+    height: 280px;
+    text-align: center;
+}
+
+.testimonial p {
+    font-size: 16px;
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    /* untuk vertikal centering */
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonial strong {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .testimonials .main-title {
+        font-size: 20px;
+    }
+
+    .testimonial {
+        flex: 0 0 220px;
+        padding: 20px 15px;
+        height: auto;
+    }
+
+    .testimonial p {
+        font-size: 14px;
+    }
+
+    .testimonial strong {
+        font-size: 14px;
+    }
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 150px;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.custom-footer {
+    background-image: url('../img/footergradient.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+/* MOBILE RESPONSIVE - Hanya layout, tidak mengubah tampilan asli */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    hr {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .orange-line {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    nav {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav ul li:last-child {
+        margin-left: 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    
+    .hero-text p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .circle-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .curve {
+        display: none; /* Sembunyikan kurva di mobile */
+    }
+    
+    /* Orange Line */
+    .orange-line {
+        width: calc(100% - 40px);
+        margin: -15px 20px 20px 20px;
+    }
+    
+    /* Tentang Kami */
+    .tentang-kami {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    
+    .tentang-kami-content,
+    .tentang-kami-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    
+    /* Testimonials */
+    .testimonial-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .testimonial {
+        flex: 0 0 calc(100% - 40px);
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 15px 0;
+    }
+    
+    .logo-img {
+        max-height: 60px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    nav ul li .contact-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    /* Hero */
+    .hero-text h2 {
+        font-size: 28px;
+    }
+    
+    .hero-text p {
+        font-size: 13px;
+    }
+    
+    .circle-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Koleksi */
+    .koleksi {
+        margin: 40px 10px;
+    }
+    
+    .koleksi-title {
+        font-size: 26px;
+    }
+    
+    .koleksi-desc {
+        font-size: 13px;
+    }
+    
+    .koleksi-item img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Alasan */
+    .alasan-title {
+        font-size: 20px;
+        padding: 12px 20px;
+    }
+    
+    .alasan-card {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    /* Tentang Kami */
+    .tentang-kami-content h2 {
+        font-size: 28px;
+    }
+    
+    .tentang-kami-content p {
+        font-size: 16px;
+    }
+    
+    /* Testimonials */
+    .testimonials .main-title {
+        font-size: 20px;
+    }
+    
+    .testimonial {
+        padding: 20px 15px;
+        height: auto;
+    }
+    
+    .testimonial p {
+        font-size: 14px;
+    }
+    
+    .testimonial strong {
+        font-size: 16px;
+    }
+    
+    /* Contact */
+    .contact-info h2 {
+        font-size: 28px;
+    }
+    
+    .contact-info p {
+        font-size: 16px;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
